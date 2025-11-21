@@ -2,27 +2,39 @@
 
 **Command-line tools for Avila Experience Fabric**
 
-[![Crates.io](https://img.shields.io/crates/v/avx-cli.svg)](https://crates.io/crates/avx-cli)
-[![Documentation](https://docs.rs/avx-cli/badge.svg)](https://docs.rs/avx-cli)
-[![License](https://img.shields.io/crates/l/avx-cli.svg)](https://github.com/avilaops/arxis#license)
+[![GitHub Release](https://img.shields.io/github/v/release/avilaops/avx-mcp)](https://github.com/avilaops/avx-mcp/releases)
+[![License](https://img.shields.io/badge/License-MIT%20OR%20Apache--2.0-blue.svg)](https://github.com/avilaops/avx-mcp#license)
+[![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
 
 Command-line interface for managing, deploying, and monitoring AVX (Avila Experience) platform services. Provides developer-friendly tools for configuration, testing, and operations.
 
 ## Installation
 
-### From crates.io
+### Via Cargo (Recommended)
 
 ```bash
-cargo install avx-cli
+cargo install --git https://github.com/avilaops/avx-mcp avx-cli
 ```
 
-### From source
+### Download Pre-built Binaries
+
+Download from [GitHub Releases](https://github.com/avilaops/avx-mcp/releases/latest):
+
+- **Windows**: `avx-mcp-windows-x64.zip`
+- **Linux**: `avx-mcp-linux-x64.tar.gz`
+- **macOS**: `avx-mcp-macos-x64.tar.gz`
+
+Extract and add to your PATH.
+
+### From Source
 
 ```bash
-git clone https://github.com/avilaops/arxis
-cd arxis/avx-cli
+git clone https://github.com/avilaops/avx-mcp
+cd avx-mcp/avx-cli
 cargo install --path .
 ```
+
+> **Note**: Package not yet published to crates.io. Use the methods above.
 
 ## Quick Start
 
