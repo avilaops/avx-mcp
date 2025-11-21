@@ -146,6 +146,7 @@ Get real-time metrics.
 
 ## 🔌 Claude Desktop Integration
 
+### Option 1: Local (Recommended)
 Add to your `claude_desktop_config.json`:
 
 ```json
@@ -159,6 +160,23 @@ Add to your `claude_desktop_config.json`:
         "AVX__CLUSTER": "us-east-1",
         "AVX__ENV": "prod"
       }
+    }
+  }
+}
+```
+
+### Option 2: Via Docker (GHCR.io)
+```json
+{
+  "mcpServers": {
+    "avx": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "-e", "AVX__STACK=production",
+        "-e", "AVX__CLUSTER=us-east-1",
+        "ghcr.io/avilaops/avx-mcp:latest"
+      ]
     }
   }
 }
